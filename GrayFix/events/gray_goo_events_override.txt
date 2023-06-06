@@ -4,7 +4,7 @@ namespace = graygoo
 
 #开始通讯
 country_event = {
-	id = graygoo.500
+	id = graygoo.700
 	title = "graygoo.500.title"
 	desc = "graygoo.500.a.desc"
 	desc = "graygoo.500.b.desc"
