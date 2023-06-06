@@ -84,7 +84,17 @@ create_gray_warship = {
 		gender = female
 		skill = 10
 		set_age = 0
-		traits = { trait = leader_trait_admiral_gray }
+		skip_background_generation = yes
+		custom_catch_phrase = gray_catch_phrase
+		custom_description = gray_backstory
+		hide_age = yes
+		traits = { 
+			trait = leader_trait_admiral_gray
+		}
+		effect = {
+			set_leader_flag = legendary_leader
+			set_leader_flag = immune_to_negative_traits
+		}
 	}
 	last_created_leader = {
 		save_global_event_target_as = gray_admiral
