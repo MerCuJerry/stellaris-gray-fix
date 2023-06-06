@@ -1,0 +1,5 @@
+portraits = {
+	GrayTempest={ 
+		texturefile = "gfx/models/portraits/GrayTempest.dds" 
+	}
+}

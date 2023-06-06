@@ -1,0 +1,13 @@
+#重写小灰异常点事件让小灰不会重复生成
+disco_gray_cat = {
+	desc = "disco_gray_cat_desc"
+	picture = "GFX_evt_ship_in_orbit_2"
+	level = 3
+
+	spawn_chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+	on_success = graygoo.400
+}

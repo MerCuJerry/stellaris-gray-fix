@@ -1,0 +1,5 @@
+empire_init_add_technologies = {
+	events = {
+		gray_fix.1
+	}
+}
