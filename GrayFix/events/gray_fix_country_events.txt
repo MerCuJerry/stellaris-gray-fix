@@ -74,7 +74,6 @@ country_event = {
 				species = root
 				name = NAME_Gray
 				event_leader = yes
-				portrait = GrayTempest
 				skill = 10
 				set_age = 0
 				traits = {
@@ -85,6 +84,9 @@ country_event = {
 				}
 			}
 			set_leader = last_created_leader
+			last_created_leader = {
+				change_leader_portrait = GrayTempest
+			}
 			save_global_event_target_as = gray_country
 		}
 		save_global_event_target_as = gray_owner
