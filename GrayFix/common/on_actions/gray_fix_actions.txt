@@ -1,5 +1,15 @@
-empire_init_add_technologies = {
+on_game_start_country = {
 	events = {
 		gray_fix.1
+	}
+}
+
+on_custom_diplomacy = {
+	events = {
+		gray_fix.100
+		gray_fix.101
+		gray_fix.102
+		gray_fix.103
+		gray_fix.104
 	}
 }
