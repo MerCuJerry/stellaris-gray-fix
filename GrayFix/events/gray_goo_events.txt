@@ -2385,6 +2385,7 @@ country_event = {
 				species = root
 				name = NAME_Gray
 				event_leader = yes
+				portrait = GrayTempest
 				skill = 10
 				set_age = 0
 				traits = {
