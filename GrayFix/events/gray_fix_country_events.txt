@@ -533,32 +533,36 @@ event = {
 
 	trigger = {
 		any_country = { is_country_type = gray_fix_country }
-		OR = {
-			AND = {
-				has_country_flag = gray_army_active
-				NOT = {
-					any_owned_army = { army_type = gray_army }
+		this = {
+			OR = {
+				AND = {
+					has_country_flag = gray_army_active
+					NOT = {
+						any_owned_army = { army_type = gray_army }
+					}
 				}
-			}
-			AND = {
-				has_country_flag = gray_warship_active
-				NOT = { exists = event_target:gray_warship }
-			}
-			AND = {
-				has_country_flag = gray_governor_active
-				NOT = { exists = event_target:gray_governor }
+				AND = {
+					has_country_flag = gray_warship_active
+					NOT = { exists = event_target:gray_warship }
+				}
+				AND = {
+					has_country_flag = gray_governor_active
+					NOT = { exists = event_target:gray_governor }
+				}
 			}
 		}
 	}
 
 	immediate = {
-		remove_country_flag = gray_governor_active
-		remove_country_flag = gray_warship_active
-		remove_country_flag = gray_army_active
-		set_country_flag = gray_reforming
-		add_modifier = {
-			modifier = "gray_scattered"
-			days = 1800
+		this = {
+			remove_country_flag = gray_governor_active
+			remove_country_flag = gray_warship_active
+			remove_country_flag = gray_army_active
+			set_country_flag = gray_reforming
+			add_modifier = {
+				modifier = "gray_scattered"
+				days = 1800
+			}
 		}
 		country_event = { id = gray_fix.111 }
 		country_event = { id = gray_fix.112 days = 1800 }
