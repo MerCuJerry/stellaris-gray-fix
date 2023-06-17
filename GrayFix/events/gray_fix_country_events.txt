@@ -130,7 +130,7 @@ country_event = {
 			NOT = { has_country_flag = gray_governor_active }
 		}
 		hidden_effect = {
-			create_gray_governor = yes
+			create_gray_governor_fix = yes
 		}
 	}
 	option = { # Warship
@@ -140,7 +140,7 @@ country_event = {
 			NOT = { has_country_flag = gray_warship_active }
 		}
 		hidden_effect = {
-			create_gray_warship = yes
+			create_gray_warship_fix = yes
 		}
 	}
 	option = { # Army
@@ -150,7 +150,7 @@ country_event = {
 			NOT = { has_country_flag = gray_army_active }
 		}
 		hidden_effect = {
-			create_gray_army = yes
+			create_gray_army_fix = yes
 		}
 	}
 	option = {
@@ -220,7 +220,7 @@ country_event = {
 			hidden_trigger = { any_owned_leader = { is_same_value = event_target:gray_governor@root } } # To prevent exploit
 		}
 		hidden_effect = {
-			create_gray_warship = yes
+			create_gray_warship_fix = yes
 		}
 	}
 	option = { # Army
@@ -230,7 +230,7 @@ country_event = {
 			hidden_trigger = { any_owned_leader = { is_same_value = event_target:gray_governor@root } }
 		}
 		hidden_effect = {
-			create_gray_army = yes
+			create_gray_army_fix = yes
 		}
 	}
 	option = {
@@ -293,7 +293,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			create_gray_governor = yes
+			create_gray_governor_fix = yes
 		}
 	}
 	option = { # Army
@@ -313,7 +313,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			create_gray_army = yes
+			create_gray_army_fix = yes
 		}
 	}
 	option = {
@@ -419,7 +419,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			create_gray_governor = yes
+			create_gray_governor_fix = yes
 		}
 	}
 	option = { # Warship
@@ -474,7 +474,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			create_gray_warship = yes
+			create_gray_warship_fix = yes
 		}
 	}
 	option = {
@@ -526,11 +526,11 @@ country_event = {
 			}
 			AND = {
 				has_country_flag = gray_warship_active
-				any_controlled_fleet = { is_same_value = event_target:gray_warship@root }
+				NOT = { any_controlled_fleet = { is_same_value = event_target:gray_warship@root } }
 			}
 			AND = {
 				has_country_flag = gray_governor_active
-				any_owned_leader = { is_same_value = event_target:gray_governor@root }
+				NOT = { any_owned_leader = { is_same_value = event_target:gray_governor@root } }
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 #创造灰风总督
-create_gray_governor = {
+create_gray_governor_fix = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
@@ -46,7 +46,7 @@ create_gray_governor = {
 		set_leader_flag = has_gained_level_trait
 	}
 }
-create_gray_warship = {
+create_gray_warship_fix = {
 	if = {
 		limit = { has_country_flag = gray_governor_active }
 		remove_country_flag = gray_governor_active
@@ -140,7 +140,7 @@ create_gray_warship = {
 	}
 }
 #创造灰风地面单位
-create_gray_army = {
+create_gray_army_fix = {
 	if = {
 		limit = { has_country_flag = gray_governor_active }
 		remove_country_flag = gray_governor_active
