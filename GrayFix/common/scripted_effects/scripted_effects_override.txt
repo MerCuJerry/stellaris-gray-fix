@@ -42,7 +42,7 @@ create_gray_governor = {
 	}
 	last_created_leader = {
 		save_global_event_target_as = gray_governor
-		change_leader_portrait = GrayTempest
+		change_leader_portrait = event_target:gray_country.ruler
 		set_leader_flag = has_gained_level_trait
 	}
 }
@@ -100,7 +100,7 @@ create_gray_warship = {
 	}
 	last_created_leader = {
 		save_global_event_target_as = gray_admiral
-		change_leader_portrait = GrayTempest
+		change_leader_portrait = event_target:gray_country.ruler
 	}
 	create_fleet = {
 		name = "NAME_Gray"

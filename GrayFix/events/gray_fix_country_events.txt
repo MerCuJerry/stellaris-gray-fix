@@ -17,19 +17,17 @@ country_event = {
 #小灰加入事件
 country_event = {
 	id = gray_fix.2
+	is_triggered_only = yes
+	diplomatic = yes
 	title = "gray_fix.2.name"
 	desc = {
 		text = "gray_fix.2.desc"
 	}
 
-	diplomatic = yes
-
 	picture_event_data = {
 		portrait = GrayTempest
 		room = "ethic_spaceship_room"
 	}
-	
-	is_triggered_only = yes
 	
 	immediate = {
 		from = { save_event_target_as = gray_homeworld }
@@ -38,7 +36,58 @@ country_event = {
 	option = {
 		name = gray_fix.2.option
 		hidden_effect = {
-			country_event = { id = graygoo.499 }
+			country_event = { id = gray_fix.3 }
 		}
+	}
+}
+
+country_event = {
+	id = gray_fix.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_country = {
+			name = "NAME_Gray"
+			type = gray
+			flag = {
+				icon= {
+					category = "special"
+					file = "gray_goo.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "sinus.dds"
+				}
+				colors={
+					"grey"
+					"dark_grey"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			establish_communications_no_message = root
+			create_leader = {
+				class = governor
+				species = root
+				name = NAME_Gray
+				event_leader = yes
+				portrait = GrayTempest
+				skill = 10
+				set_age = 0
+				traits = {
+					trait = leader_trait_governor_gray
+					trait = subclass_governor_economist
+					trait = leader_trait_urbanist_3
+					trait = leader_trait_scrapper_2
+				}
+			}
+			set_leader = last_created_leader
+			save_global_event_target_as = gray_country
+		}
+		save_global_event_target_as = gray_owner
 	}
 }

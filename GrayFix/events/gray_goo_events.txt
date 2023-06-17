@@ -2414,7 +2414,7 @@ country_event = {
 	diplomatic = yes
 	picture = GFX_evt_mysterious_signal
 	picture_event_data = {
-		portrait = GrayTempest
+		portrait = event_target:gray_country.ruler
 		room = root
 	}
 
@@ -2492,7 +2492,7 @@ country_event = {
 
 	picture = GFX_evt_busy_spaceport
 	picture_event_data = {
-		portrait = event_target:gray_governor
+		portrait = event_target:gray_country.ruler
 		room = root
 	}
 
@@ -2572,7 +2572,7 @@ country_event = {
 
 	picture = GFX_evt_fleet_neutral
 	picture_event_data = {
-		portrait = event_target:gray_admiral
+		portrait = event_target:gray_country.ruler
 		room = root
 	}
 
@@ -2656,7 +2656,7 @@ country_event = {
 
 	picture = GFX_evt_fleet_neutral
 	picture_event_data = {
-		portrait = GrayTempest
+		portrait = event_target:gray_country.ruler
 		room = root
 	}
 
