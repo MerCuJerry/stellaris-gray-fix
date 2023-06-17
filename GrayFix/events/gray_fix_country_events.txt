@@ -525,7 +525,7 @@ country_event = {
 }
 
 # Gray destroyed or disbanded
-country_event = {
+event = {
 	id = gray_fix.110
 	hide_window = yes
 
