@@ -14,7 +14,7 @@ on_custom_diplomacy = {
 	}
 }
 
-on_monthly_pulse = {
+on_monthly_pulse_country = {
 	events = {
 		gray_fix.110
 	}

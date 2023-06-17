@@ -11,6 +11,47 @@ country_event = {
 			}
 			country_event = { id = gray_fix.2 }
 		}
+		create_country = {
+			name = "NAME_Gray"
+			type = gray_fix_country
+			flag = {
+				icon= {
+					category = "special"
+					file = "gray_goo.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "sinus.dds"
+				}
+				colors={
+					"grey"
+					"dark_grey"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			create_leader = {
+				class = governor
+				species = root
+				name = NAME_Gray
+				event_leader = yes
+				skill = 10
+				set_age = 0
+				traits = {
+					trait = leader_trait_governor_gray
+					trait = subclass_governor_economist
+					trait = leader_trait_urbanist_3
+					trait = leader_trait_scrapper_2
+				}
+			}
+			set_leader = last_created_leader
+			last_created_leader = {
+				change_leader_portrait = GrayTempest
+			}
+			save_global_event_target_as = gray_country
+		}
 	}
 }
 
@@ -40,60 +81,10 @@ country_event = {
 	option = {
 		name = gray_fix.2.option
 		hidden_effect = {
-			country_event = { id = gray_fix.3 }
-		}
-	}
-}
-
-country_event = {
-	id = gray_fix.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		create_country = {
-			name = "NAME_Gray"
-			type = gray_fix_country
-			flag = {
-				icon= {
-					category = "special"
-					file = "gray_goo.dds"
-				}
-				background= {
-					category = "backgrounds"
-					file = "sinus.dds"
-				}
-				colors={
-					"grey"
-					"dark_grey"
-					"null"
-					"null"
-				}
+			event_target:gray_country = {
+				establish_communications_no_message = root
 			}
 		}
-		last_created_country = {
-			establish_communications_no_message = root
-			create_leader = {
-				class = governor
-				species = root
-				name = NAME_Gray
-				event_leader = yes
-				skill = 10
-				set_age = 0
-				traits = {
-					trait = leader_trait_governor_gray
-					trait = subclass_governor_economist
-					trait = leader_trait_urbanist_3
-					trait = leader_trait_scrapper_2
-				}
-			}
-			set_leader = last_created_leader
-			last_created_leader = {
-				change_leader_portrait = GrayTempest
-			}
-			save_global_event_target_as = gray_country
-		}
-		save_global_event_target_as = gray_owner
 	}
 }
 
