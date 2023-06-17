@@ -516,6 +516,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		is_ai = no
 		any_country = { is_country_type = gray_fix_country }
 		OR = {
 			AND = {
