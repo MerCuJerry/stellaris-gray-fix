@@ -171,6 +171,7 @@ create_gray_army = {
 				distance = 0
 				angle = random
 			}
+			save_global_event_target_as = gray_army@root
 		}
 	}
 	if = {
