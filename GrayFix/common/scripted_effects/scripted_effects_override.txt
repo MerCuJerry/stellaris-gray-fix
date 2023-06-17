@@ -161,7 +161,7 @@ create_gray_army_fix = {
 		event_target:gray_warship@root = { save_event_target_as = gray_transport_location }
 	}
 	else = {
-		capital_scope = { save_event_target_as = gray_transport_location@root }
+		capital_scope = { save_event_target_as = gray_transport_location }
 	}
 	set_country_flag = gray_army_active
 	create_fleet = {
@@ -175,7 +175,7 @@ create_gray_army_fix = {
 				army_type = "gray_army"
 			}
 			set_location = {
-				target = event_target:gray_transport_location@root
+				target = event_target:gray_transport_location
 				distance = 0
 				angle = random
 			}
