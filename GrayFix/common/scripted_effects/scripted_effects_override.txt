@@ -40,7 +40,7 @@ create_gray_governor_fix = {
 			trait = leader_trait_scrapper_2
 		}
 		effect = {
-			set_fleet_flag = gray_governor
+			set_leader_flag = gray_governor
 			set_leader_flag = legendary_leader
 			set_leader_flag = immune_to_negative_traits
 		}
