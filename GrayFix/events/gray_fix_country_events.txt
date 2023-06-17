@@ -525,7 +525,7 @@ country_event = {
 }
 
 # Gray destroyed or disbanded
-event = {
+country_event = {
 	id = gray_fix.110
 	hide_window = yes
 
@@ -533,40 +533,41 @@ event = {
 
 	trigger = {
 		any_country = { is_country_type = gray_fix_country }
-		exists = event_target:gray_owner
-		event_target:gray_owner = {
-			OR = {
-				AND = {
-					has_country_flag = gray_army_active
-					NOT = {
-						any_owned_army = { army_type = gray_army }
-					}
-				}
-				AND = {
-					has_country_flag = gray_warship_active
-					NOT = { exists = event_target:gray_warship }
-				}
-				AND = {
-					has_country_flag = gray_governor_active
-					NOT = { exists = event_target:gray_governor }
+		OR = {
+			AND = {
+				has_country_flag = gray_army_active
+				NOT = {
+					any_owned_army = { army_type = gray_army }
 				}
 			}
+			AND = {
+				has_country_flag = gray_warship_active
+				NOT = { exists = event_target:gray_warship }
+			}
+			AND = {
+				has_country_flag = gray_governor_active
+				NOT = { exists = event_target:gray_governor }
+			}
 		}
+		#exists = event_target:gray_owner
+		#event_target:gray_owner = {
+		#	
+		#}
 	}
 
 	immediate = {
-		event_target:gray_owner = {
+		#event_target:gray_owner = {
 			remove_country_flag = gray_governor_active
 			remove_country_flag = gray_warship_active
 			remove_country_flag = gray_army_active
 			set_country_flag = gray_reforming
 			add_modifier = {
 				modifier = "gray_scattered"
-				days = 1800
+				days = 360
 			}
-		}
+		#}
 		country_event = { id = gray_fix.111 }
-		country_event = { id = gray_fix.112 days = 1800 }
+		country_event = { id = gray_fix.112 days = 360 }
 	}
 }
 
