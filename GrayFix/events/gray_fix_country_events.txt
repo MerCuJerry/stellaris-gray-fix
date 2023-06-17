@@ -1,16 +1,10 @@
 namespace = gray_fix
 
-country_event = {
+event = {
 	id = gray_fix.1
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		if = { 
-			limit = { 
-				is_ai = no 
-			}
-			country_event = { id = gray_fix.2 }
-		}
 		create_country = {
 			name = "NAME_Gray"
 			type = gray_fix_country
@@ -69,7 +63,7 @@ country_event = {
 		portrait = GrayTempest
 		room = "ethic_spaceship_room"
 	}
-	
+
 	trigger = {
 		is_ai = no
 	}
@@ -540,23 +534,17 @@ event = {
 				NOT = { exists = event_target:gray_governor }
 			}
 		}
-		#exists = event_target:gray_owner
-		#event_target:gray_owner = {
-		#	
-		#}
 	}
 
 	immediate = {
-		#event_target:gray_owner = {
-			remove_country_flag = gray_governor_active
-			remove_country_flag = gray_warship_active
-			remove_country_flag = gray_army_active
-			set_country_flag = gray_reforming
-			add_modifier = {
-				modifier = "gray_scattered"
-				days = 360
-			}
-		#}
+		remove_country_flag = gray_governor_active
+		remove_country_flag = gray_warship_active
+		remove_country_flag = gray_army_active
+		set_country_flag = gray_reforming
+		add_modifier = {
+			modifier = "gray_scattered"
+			days = 360
+		}
 		country_event = { id = gray_fix.111 }
 		country_event = { id = gray_fix.112 days = 360 }
 	}
