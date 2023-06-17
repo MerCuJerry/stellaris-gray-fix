@@ -129,6 +129,9 @@ create_gray_warship_fix = {
 			}
 		}
 	}
+	last_created_fleet = {
+		set_fleet_flag = gray_fleet
+	}
 	if = {
 		limit = { has_country_flag = gray_army_active }
 		remove_country_flag = gray_army_active

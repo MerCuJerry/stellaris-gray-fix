@@ -524,7 +524,7 @@ country_event = {
 			}
 			AND = {
 				has_country_flag = gray_warship_active
-				NOT = { any_controlled_fleet = { is_same_value = event_target:gray_warship@root } }
+				NOT = { any_controlled_fleet = { has_fleet_flag = gray_fleet } }
 			}
 			AND = {
 				has_country_flag = gray_governor_active
