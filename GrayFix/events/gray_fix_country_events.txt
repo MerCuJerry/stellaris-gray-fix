@@ -184,7 +184,7 @@ country_event = {
 		has_country_flag = gray_governor_active
 		NOT = { has_country_flag = gray_reforming }
 		NOT = { has_country_flag = gray_diplomacy_engaged }
-		exists = event_target:gray_governor
+		exists = event_target:gray_governor@root
 	}
 
 	immediate = {
@@ -193,19 +193,19 @@ country_event = {
 			limit = {
 				any_owned_planet = {
 					exists = leader
-					leader = { is_same_value = event_target:gray_governor }
+					leader = { is_same_value = event_target:gray_governor@root }
 				}
 			}
 			random_owned_planet = {
 				limit = {
 					exists = leader
-					leader = { is_same_value = event_target:gray_governor }
+					leader = { is_same_value = event_target:gray_governor@root }
 				}
-				save_event_target_as = gray_governor_planet
+				save_event_target_as = gray_governor_planet@root
 			}
 		}
 		else = {
-			capital_scope = { save_event_target_as = gray_governor_planet }
+			capital_scope = { save_event_target_as = gray_governor_planet@root }
 		}
 	}
 
@@ -217,7 +217,7 @@ country_event = {
 		name = graygoo.500.b
 		response_text = graygoo.501.b.response
 		allow = {
-			hidden_trigger = { exists = event_target:gray_governor } # To prevent exploit
+			hidden_trigger = { exists = event_target:gray_governor@root } # To prevent exploit
 		}
 		hidden_effect = {
 			create_gray_warship = yes
@@ -227,7 +227,7 @@ country_event = {
 		name = graygoo.500.c
 		response_text = graygoo.501.c.response
 		allow = {
-			hidden_trigger = { exists = event_target:gray_governor }
+			hidden_trigger = { exists = event_target:gray_governor@root }
 		}
 		hidden_effect = {
 			create_gray_army = yes
@@ -264,9 +264,9 @@ country_event = {
 		has_country_flag = gray_warship_active
 		NOT = { has_country_flag = gray_reforming }
 		NOT = { has_country_flag = gray_diplomacy_engaged }
-		exists = event_target:gray_warship
-		any_controlled_fleet = { is_same_value = event_target:gray_warship }
-		event_target:gray_warship = { num_ships > 0 }
+		exists = event_target:gray_warship@root
+		any_controlled_fleet = { is_same_value = event_target:gray_warship@root }
+		event_target:gray_warship@root = { num_ships > 0 }
 	}
 
 	immediate = {
@@ -282,15 +282,15 @@ country_event = {
 		response_text = graygoo.502.a.response
 		allow = {
 			hidden_trigger = { # To prevent exploit
-				event_target:gray_warship = { num_ships > 0 }
+				event_target:gray_warship@root = { num_ships > 0 }
 			}
 			custom_tooltip = {
 				fail_text = graygoo.500.allow.a
-				event_target:gray_warship = { is_in_combat = no }
+				event_target:gray_warship@root = { is_in_combat = no }
 			}
 			custom_tooltip = {
 				fail_text = graygoo.500.allow.b
-				event_target:gray_warship = { NOT = { has_hp_percentage < 1.0 } }
+				event_target:gray_warship@root = { NOT = { has_hp_percentage < 1.0 } }
 			}
 		}
 		hidden_effect = {
@@ -302,15 +302,15 @@ country_event = {
 		response_text = graygoo.502.c.response
 		allow = {
 			hidden_trigger = {
-				event_target:gray_warship = { num_ships > 0 }
+				event_target:gray_warship@root = { num_ships > 0 }
 			}
 			custom_tooltip = {
 				fail_text = graygoo.500.allow.a
-				event_target:gray_warship = { is_in_combat = no }
+				event_target:gray_warship@root = { is_in_combat = no }
 			}
 			custom_tooltip = {
 				fail_text = graygoo.500.allow.b
-				event_target:gray_warship = { NOT = { has_hp_percentage < 1.0 } }
+				event_target:gray_warship@root = { NOT = { has_hp_percentage < 1.0 } }
 			}
 		}
 		hidden_effect = {
@@ -527,11 +527,11 @@ event = {
 			}
 			AND = {
 				has_country_flag = gray_warship_active
-				NOT = { exists = event_target:gray_warship }
+				NOT = { exists = event_target:gray_warship@root }
 			}
 			AND = {
 				has_country_flag = gray_governor_active
-				NOT = { exists = event_target:gray_governor }
+				NOT = { exists = event_target:gray_governor@root }
 			}
 		}
 	}
