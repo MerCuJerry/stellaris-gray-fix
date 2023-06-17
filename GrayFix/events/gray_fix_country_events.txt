@@ -28,7 +28,7 @@ event = {
 		last_created_country = {
 			create_leader = {
 				class = governor
-				species = HUM
+				species = owner_main_species
 				name = NAME_Gray
 				event_leader = yes
 				skill = 10
@@ -60,7 +60,7 @@ country_event = {
 	}
 
 	picture_event_data = {
-		portrait = GrayTempest
+		portrait = event_target:gray_country.ruler
 		room = "ethic_spaceship_room"
 	}
 
@@ -69,16 +69,13 @@ country_event = {
 	}
 	
 	immediate = {
-		from = { save_event_target_as = gray_homeworld }
+		event_target:gray_country = {
+			establish_communications_no_message = root
+		}
 	}
 	
 	option = {
 		name = gray_fix.2.option
-		hidden_effect = {
-			event_target:gray_country = {
-				establish_communications_no_message = root
-			}
-		}
 	}
 }
 
