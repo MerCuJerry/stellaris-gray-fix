@@ -3,8 +3,12 @@ create_gray_governor_fix = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
-		event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
-		event_target:gray_warship@root = { delete_fleet = this }#删除灰风母舰
+		#event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
+		destroy_fleet = {
+			target = event_target:gray_warship@root
+			kill_leader = yes
+		}
+		#event_target:gray_warship@root = { delete_fleet = this }#删除灰风母舰
 	}
 	if = {
 		limit = { has_country_flag = gray_army_active }
@@ -99,7 +103,7 @@ create_gray_warship_fix = {
 		}
 	}
 	last_created_leader = {
-		save_global_event_target_as = gray_admiral@root
+		save_global_event_target_as = gray_admiral
 		change_leader_portrait = GrayTempest
 	}
 	create_fleet = {
@@ -122,7 +126,7 @@ create_gray_warship_fix = {
 			}
 			save_global_event_target_as = gray_warship@root
 			set_location = event_target:gray_warship_location
-			assign_leader = event_target:gray_admiral@root
+			assign_leader = event_target:gray_admiral
 			add_modifier = {
 				modifier = "gray_warship"
 				days = -1
@@ -180,7 +184,11 @@ create_gray_army_fix = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
-		event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
-		event_target:gray_warship@root = { delete_fleet = this }
+		#event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
+		destroy_fleet = {
+			target = event_target:gray_warship@root
+			kill_leader = yes
+		}
+		#event_target:gray_warship@root = { delete_fleet = this }#删除灰风母舰
 	}
 }
