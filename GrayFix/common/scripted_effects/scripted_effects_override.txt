@@ -5,7 +5,11 @@ create_gray_governor_fix = {
 		remove_country_flag = gray_warship_active
 		event_target:gray_warship@root = { 
 			delete_fleet = this 
-			kill_leader = { show_notification = no } 
+			kill_leader = {
+				type = admiral
+				show_notification = no
+				fire = yes
+			} 
 		}#删除灰风母舰
 	}
 	if = {
@@ -185,7 +189,11 @@ create_gray_army_fix = {
 		remove_country_flag = gray_warship_active
 		event_target:gray_warship@root = { 
 			delete_fleet = this
-			kill_leader = { show_notification = no } 
+			kill_leader = {
+				type = admiral
+				show_notification = no
+				fire = yes
+			} 
 		}
 	}
 }
