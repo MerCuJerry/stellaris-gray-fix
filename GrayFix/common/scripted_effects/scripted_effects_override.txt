@@ -3,8 +3,10 @@ create_gray_governor_fix = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
-		event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
-		event_target:gray_warship@root = { delete_fleet = this }#删除灰风母舰
+		event_target:gray_warship@root = { 
+			delete_fleet = this 
+			kill_leader = { show_notification = no } 
+		}#删除灰风母舰
 	}
 	if = {
 		limit = { has_country_flag = gray_army_active }
@@ -181,7 +183,9 @@ create_gray_army_fix = {
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
-		event_target:gray_admiral@root = { kill_leader = { show_notification = no } }
-		event_target:gray_warship@root = { delete_fleet = this }#删除灰风母舰
+		event_target:gray_warship@root = { 
+			delete_fleet = this
+			kill_leader = { show_notification = no } 
+		}
 	}
 }
