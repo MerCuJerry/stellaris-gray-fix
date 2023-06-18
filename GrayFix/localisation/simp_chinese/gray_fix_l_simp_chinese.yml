@@ -5,3 +5,5 @@
  leader_trait_admiral_gray:0 "纳米机器个体"
  leader_trait_admiral_gray_desc:0 "小灰本质上是由不计其数的先进纳米机器组成的密集个体"
  NAME_Gray_Warship_Upgrade:0 "改纳米机器人实体舰"
+ gray_fix.5.desc:0 "这真是令人怀念......谢谢你带我来这里。"
+ gray_fix.5.a:0 "......确实。"

@@ -184,6 +184,9 @@ create_gray_army_fix = {
 			save_global_event_target_as = gray_army@root
 		}
 	}
+	last_created_fleet = {
+		set_fleet_flag = gray_army
+	}
 	if = {
 		limit = { has_country_flag = gray_warship_active }
 		remove_country_flag = gray_warship_active
